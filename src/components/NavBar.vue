@@ -8,7 +8,13 @@
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useItemsStore } from '../stores/itemsStore'
 
+function clearRoom() {
+  const itemsStore = useItemsStore()
+  itemsStore.removeItems()
+}
 
 </script>
 
