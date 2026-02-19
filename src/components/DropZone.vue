@@ -33,5 +33,13 @@ function onDrop(e) {
 .drop-zone {
   flex: 1;
   position: relative;
+  transition: outline 0.15s;
+  outline: 3px solid transparent;
+  outline-offset: -3px;
+}
+
+.drop-zone.is-dragging-over {
+  outline: 3px dashed #7f5af0;
+  background-color: rgba(127, 90, 240, 0.05);
 }
 </style>

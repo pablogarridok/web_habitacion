@@ -32,7 +32,7 @@ export const useItemsStore = defineStore("furniture", () => {
     id: "lavabo",
     name: "Lavabo",
     modelPath: "/models/toilet.glb",
-    icon: "/icons/sink.png"
+    icon: "/icons/toilet.png"
   },
   {
     id: "lampara",
@@ -45,6 +45,30 @@ export const useItemsStore = defineStore("furniture", () => {
     name: "planta",
     modelPath: "/models/pottedPlant.glb",
     icon: "/icons/plant.png"
+  },
+  {
+    id: "televisión",
+    name: "Televisión",
+    modelPath: "/models/televisionVintage.glb",
+    icon: "/icons/television.png"
+  },
+  {
+    id: "SofaGorila",
+    name: "Sofá Gorila",
+    modelPath: "/models/gorila2.glb",
+    icon: "/icons/gorila.png"
+  },
+  {
+    id: "alfombra",
+    name: "Alfombra",
+    modelPath: "/models/rugRectangle.glb",
+    icon: "/icons/carpet.png"
+  },
+  {
+    id: "sandro",
+    name: "Sandro",
+    modelPath: "/models/sandro2.glb",
+    icon: "/icons/sandro.png"
   }
 ])
 

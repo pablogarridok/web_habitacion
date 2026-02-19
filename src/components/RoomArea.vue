@@ -89,7 +89,7 @@ onMounted(() => {
   controls = new OrbitControls(camera, renderer.domElement)
   
   const dirLight = new THREE.DirectionalLight(0xfff8f0, 1.2)
-  dirLight.position.set(8, 15, 8)
+  dirLight.position.set(40, 40, 40)
   dirLight.castShadow = true
   dirLight.shadow.camera.near = 0.5
   dirLight.shadow.camera.far = 60
@@ -99,7 +99,7 @@ onMounted(() => {
   dirLight.shadow.camera.bottom = -15
   dirLight.shadow.mapSize.set(2048, 2048)
   scene.add(dirLight)
-  scene.add(new THREE.AmbientLight(0xffffff, 0.5))
+  scene.add(new THREE.AmbientLight(0xffffff, 0.9))
   const fill = new THREE.DirectionalLight(0xd0e8ff, 0.35)
   fill.position.set(-5, 8, -5)
   scene.add(fill)
