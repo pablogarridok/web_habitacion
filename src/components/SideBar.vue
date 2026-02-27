@@ -32,9 +32,7 @@ function onDragStart(event, item) {
   emit('drag', item)
 }
 
-function onDragEnd(event) {
-  console.log('dragend')
-}
+
 </script>
 <style scoped>
 .sidebar {

@@ -17,6 +17,18 @@ export const useItemsStore = defineStore("furniture", () => {
     icon: "/icons/chair.png"
   },
   {
+    id: "sillaRuedas",
+    name: "Silla de ruedas",
+    modelPath: "/models/chairDesk.glb",
+    icon: "/icons/chairDesk.png"
+  },
+  {
+    id: "cama",
+    name: "Cama",
+    modelPath: "/models/bedSingle.glb",
+    icon: "/icons/bed.png"
+  },
+  {
     id: "mesa",
     name: "Mesa",
     modelPath: "/models/table.glb",
@@ -69,6 +81,12 @@ export const useItemsStore = defineStore("furniture", () => {
     name: "Sandro",
     modelPath: "/models/sandro2.glb",
     icon: "/icons/sandro.png"
+  },
+  {
+    id: "perroFeo",
+    name: "Perro Feo",
+    modelPath: "/models/perroFeo.glb",
+    icon: "/icons/perroFeo.png"
   }
 ])
 
@@ -76,10 +94,6 @@ export const useItemsStore = defineStore("furniture", () => {
 
   const addItem = (item) => {
   placedItems.value.push(item);
-}
-
-  function removeLastItem(id) {
-    placedItems.value.pop();
   }
 
   function removeItems() {
@@ -90,7 +104,6 @@ export const useItemsStore = defineStore("furniture", () => {
     catalog,
     placedItems,
     addItem,
-    removeLastItem,
     removeItems
   };
 });

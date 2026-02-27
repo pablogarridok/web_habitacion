@@ -36,7 +36,6 @@ function onDrop(item, event) {
 </script>
 
 
-
 <style scoped>
 .layout {
   display: flex;

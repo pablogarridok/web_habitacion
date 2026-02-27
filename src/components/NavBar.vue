@@ -74,9 +74,9 @@ function clearRoom() {
 }
 
 .navbar button:hover {
-  background-color: #111827;
+  background-color: #fd0000;
   color: white;
-  border-color: #111827;
+  transition: all 0.3s ease;
 }
 
 .navbar button:active {
