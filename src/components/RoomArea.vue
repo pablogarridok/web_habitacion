@@ -5,14 +5,14 @@
       class="item-actions"
       :style="{ top: actionPos.y + 'px', left: actionPos.x + 'px' }"
     >
-      <span class="action-hint">✥ Arrastra para mover</span>
-      <button class="action-btn rotate-btn" @click.stop="rotateSelected" title="Rotar 90°">
-        ↻ Rotar
+      <span class="action-hint">Arrastra para mover</span>
+      <button class="action-btn rotate-btn" @click="rotateSelected" title="Rotar 90°">
+        Rotar
       </button>
-      <button class="action-btn delete-btn" @click.stop="deleteSelected" title="Eliminar">
-        🗑 Eliminar
+      <button class="action-btn delete-btn" @click="deleteSelected" title="Eliminar">
+        Eliminar
       </button>
-      <button class="action-btn close-btn" @click.stop="deselectModel" title="Cerrar">
+      <button class="action-btn close-btn" @click="deselectModel" title="Cerrar">
         ✕
       </button>
     </div>
