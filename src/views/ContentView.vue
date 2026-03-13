@@ -1,11 +1,10 @@
 <template>
   <div class="layout">
-    <SideBar @drag="onDrag" />
+    <SideBar />
 
     <DropZone @drop="onDrop">
       <RoomArea ref="roomRef" />
     </DropZone>
-
   </div>
 </template>
 
@@ -17,20 +16,14 @@ import RoomArea from '../components/RoomArea.vue'
 import DropZone from '../components/DropZone.vue'
 
 const roomRef = ref(null)
-let dragged = null
-
-function onDrag(item) {
-  dragged = item
-}
 
 function onDrop(item, event) {
 
-  const itemToDrop = item || dragged
+  const itemToDrop = item 
   
   const pos = roomRef.value.getPosition(event)
   
   roomRef.value.addItem(itemToDrop, pos)
-  dragged = null
 }
 
 </script>

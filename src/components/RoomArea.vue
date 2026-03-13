@@ -34,7 +34,11 @@ function getPuntoEnSuelo(clientX, clientY) {
 
   raycaster.setFromCamera(posRaton, camara)
   const colisiones = raycaster.intersectObject(suelo)
-  return colisiones.length > 0 ? colisiones[0].point : null
+  if (colisiones.length > 0) {
+    return colisiones[0].point
+  } else {
+    return null
+  }
 }
 
 
