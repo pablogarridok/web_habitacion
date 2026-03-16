@@ -18,12 +18,10 @@ import DropZone from '../components/DropZone.vue'
 const roomRef = ref(null)
 
 function onDrop(item, event) {
-
-  const itemToDrop = item 
   
   const pos = roomRef.value.getPosition(event)
   
-  roomRef.value.addItem(itemToDrop, pos)
+  roomRef.value.addItem(item, pos)
 }
 
 </script>

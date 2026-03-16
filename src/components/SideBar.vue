@@ -10,7 +10,7 @@
       @dragstart="onDragStart($event, item)"
       @dragend="onDragEnd"
     >
-      <img v-if="item.icon" :src="item.icon" width="32" alt="" />
+      <img :src="item.icon" width="32" alt="" />
       <span class="items-name">{{ item.name }}</span>
     </div>
   </aside>

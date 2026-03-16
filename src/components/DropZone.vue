@@ -24,7 +24,7 @@ function onDrop(e) {
     const item = JSON.parse(data)
     emit('drop', item, e)
   } catch (error) {
-    console.error('Error al parsear item:', error)
+    console.log('Error al parsear item:', error)
   }
 }
 </script>

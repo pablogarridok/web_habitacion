@@ -8,8 +8,6 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const props = defineProps({ items: Array })
-const emit = defineEmits(['floor-click'])
 
 const contenedor = ref(null)
 
@@ -108,11 +106,6 @@ function alSoltarRaton(event) {
     eraMueble.rotation.y += Math.PI / 2
   }
 
-  if (!eraMueble) {
-    const punto = getPuntoEnSuelo(event.clientX, event.clientY)
-    if (punto) emit('floor-click', { x: punto.x, z: punto.z })
-  }
-
   muebleArrastrando = null
   estaArrastrando = false
   controles.enabled = true
@@ -137,7 +130,12 @@ function addItem(item, pos) {
 
 function getPosition(event) {
   const punto = getPuntoEnSuelo(event.clientX, event.clientY)
-  return punto ? { x: punto.x, z: punto.z } : null
+
+  if (punto) {
+    return { x: punto.x, z: punto.z }
+  } else {
+    return null
+  }
 }
 
 defineExpose({ addItem, getPosition })
@@ -156,7 +154,6 @@ onMounted(() => {
 
   camara = new THREE.PerspectiveCamera(75, contenedor.value.clientWidth / contenedor.value.clientHeight, 0.1, 1000)
   camara.position.set(0, 10, 15)
-  camara.lookAt(0, 0, 0)
 
   renderizador = new THREE.WebGLRenderer({ antialias: true })
   renderizador.setSize(contenedor.value.clientWidth, contenedor.value.clientHeight)

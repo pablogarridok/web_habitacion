@@ -90,20 +90,9 @@ export const useItemsStore = defineStore("furniture", () => {
   }
 ])
 
-  const placedItems = ref([]);
-
-  const addItem = (item) => {
-  placedItems.value.push(item);
-  }
-
-  function removeItems() {
-    placedItems.value = [];
-  }
 
   return {
     catalog,
-    placedItems,
-    addItem,
-    removeItems
+    
   };
 });
